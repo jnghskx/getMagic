@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="bettle.gif">
+  <title>Awaken Magic Powers Online Free</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      background-image: url("https://i.imgur.com/v1mcQMs.gif"); /*WHATEVER GO MY SCARAB*/
+      background-repeat: repeat;
+      background-size: auto; /* keep original tile size */
+      animation: scroll-bg 30s linear infinite;
+    }
+
+    @keyframes scroll-bg {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: -1000px -1000px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio id="bgm" loop>
+  <source src="https://files.catbox.moe/u3cnpc.mp3" type="audio/mpeg"> 
+  <!-- sparkle sfX -->
+</audio>
+
+
+<script>
+  const audio = document.getElementById("bgm");
+
+  // start muted on first interaction (browser autoplay rules)
+  document.addEventListener("click", () => {
+    audio.play();
+  }, { once: true });
+
+  // pause/resume based on tab visibility
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
